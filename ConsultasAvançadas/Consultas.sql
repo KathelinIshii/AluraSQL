@@ -27,11 +27,14 @@ diferentes tabelas que possuem o mesmo nome*/
 SELECT * FROM TABELA_DE_PRODUTOS;
 
 SELECT * FROM TABELA_DE_PRODUTOS WHERE 1 = 1;
+/*Quando o valor for verdadeiro ele vai me trazer algum resultado*/
 
 SELECT * FROM TABELA_DE_PRODUTOS WHERE 1 = 0;
+/*Quando o valor for falso ele não me trara nenhum resultado*/
 
 SELECT * FROM TABELA_DE_PRODUTOS WHERE CODIGO_DO_PRODUTO = '1004327';
 
 SELECT * FROM TABELA_DE_PRODUTOS WHERE SABOR = 'Laranja';
 
 SELECT * FROM TABELA_DE_PRODUTOS WHERE EMBALAGEM = 'PET';
+
