@@ -89,3 +89,10 @@ SELECT * FROM TABELA_DE_PRODUTOS WHERE (SABOR LIKE 'MORANGO%') AND (EMBALAGEM = 
 SELECT NOME FROM TABELA_DE_CLIENTES;
 
 SELECT * FROM TABELA_DE_CLIENTES WHERE NOME LIKE '%SILVA%';
+/*Quando o % estiver em entiver como no exmplo acima, ele vai pegar tudo que estiver com silva*/
+
+SELECT * FROM TABELA_DE_CLIENTES WHERE NOME LIKE '%SILVA';
+/*Quando o % estier no começo da paravra, ela vai trazer somente o tudo que estiver com silva no final, tudo que a última paravra for silva*/
+
+SELECT * FROM TABELA_DE_CLIENTES WHERE NOME LIKE 'SILVA%';
+/*E quando o % estiver no final, ele vai me trazer tudo que começa com a palavra silva*/
