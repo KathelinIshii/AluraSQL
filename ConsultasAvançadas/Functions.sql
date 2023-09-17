@@ -18,3 +18,25 @@ FROM TABELA_DE_PRODUTOS;
 
 SELECT TAMANHO, REPLACE((REPLACE(TAMANHO, 'Litros', 'L')),'Litro', 'L') AS [TAMANHO MODIFICADO]
 FROM TABELA_DE_PRODUTOS;
+
+------------
+
+SELECT NOME
+FROM TABELA_DE_CLIENTES;
+
+SELECT NOME, SUBSTRING(NOME, 1, CHARINDEX(' ', NOME) ) AS [PRIMEIRO NOME]
+FROM TABELA_DE_CLIENTES;
+
+--No código acima estamos usando a SUBSTRING para poder selecionar a primeira letra de casa coluna e usando o CHARINDEX para poder pegar tudo que está antes do espaço
+
+SELECT NOME, SUBSTRING(NOME, 1, CHARINDEX(' ', NOME) - 1 ) AS [PRIMEIRO NOME]
+FROM TABELA_DE_CLIENTES;
+
+--Nesse onde eu coloco o -1, é para poder tirar o espaço 
+
+SELECT
+	SUBSTRING(NOME, 1, CHARINDEX(' ', NOME) - 1 ) AS [PRIMEIRO NOME],
+	SUBSTRING(NOME,
+                 CHARINDEX(' ', NOME) + 1,
+                 LEN(NOME) - CHARINDEX(' ', NOME)) AS [ÚLTIMO NOME]
+FROM TABELA_DE_CLIENTES;
