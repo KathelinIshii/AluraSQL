@@ -40,3 +40,5 @@ SELECT
                  CHARINDEX(' ', NOME) + 1,
                  LEN(NOME) - CHARINDEX(' ', NOME)) AS [ÚLTIMO NOME]
 FROM TABELA_DE_CLIENTES;
+
+------------
