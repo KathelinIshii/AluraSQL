@@ -109,8 +109,8 @@ FROM ITENS_NOTAS_FISCAIS;
 
 SELECT 
 	DATENAME(YY, DATA_VENDA) AS [ANO DE 2016], 
-	IMPOSTO
+	CEILING(IMPOSTO) [ARREDONDANDO PARA O MENOR INTEIRO]
 FROM NOTAS_FISCAIS
 WHERE DATA_VENDA > '2016' AND DATA_VENDA < '2017';
 
---Calcule o valor do imposto pago no ano de 2016, arredondando para o menor inteiro.
+------------
