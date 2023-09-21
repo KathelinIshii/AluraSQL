@@ -16,3 +16,24 @@ FROM TABELA_DE_PRODUTOS;
 SELECT NOME_DO_PRODUTO, CONCAT('O preço de lista é: ', CAST(PRECO_DE_LISTA AS VARCHAR(10))) as [PREÇO]
 FROM TABELA_DE_PRODUTOS;
 --Conversão explicita
+
+-------------
+
+--Queremos construir um SQL cujo resultado seja para cada cliente:
+
+--"O cliente João da Silva comprou R$ 121222,12 no ano de 2016".
+
+--Faça isso somente para o ano de 2016.
+
+SELECT * FROM TABELA_DE_CLIENTES;
+
+SELECT * FROM NOTAS_FISCAIS;
+
+SELECT * FROM ITENS_NOTAS_FISCAIS;
+
+SELECT NOME, QUANTIDADE, PRECO, DATA_VENDA
+FROM NOTAS_FISCAIS NF
+INNER JOIN TABELA_DE_CLIENTES TC
+ON NF.CPF = TC.CPF
+INNER JOIN ITENS_NOTAS_FISCAIS INF
+ON NF.NUMERO = INF.NUMERO;
