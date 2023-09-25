@@ -68,9 +68,6 @@ ON [TOTAL VENDA].CPF = TC.CPF
 WHERE [TOTAL VENDA].[MÊS/ANO] = '2015-01';
 GO
 
---Nesse sentido, nosso compromisso agora é que você complemente este relatório, isto é, listando somente os que tiveram vendas inválidas
---e calculando a diferença entre o limite de venda máximo e o realizado, em percentuais. QUANTOS % A MAIS ELE PASSOU
-
 SELECT
 	TC.CPF,
 	TC.NOME,
