@@ -69,7 +69,7 @@ WHERE [TOTAL VENDA].[MÊS/ANO] = '2015-01';
 GO
 
 --Nesse sentido, nosso compromisso agora é que você complemente este relatório, isto é, listando somente os que tiveram vendas inválidas
--- e calculando a diferença entre o limite de venda máximo e o realizado, em percentuais.
+--e calculando a diferença entre o limite de venda máximo e o realizado, em percentuais. QUANTOS % A MAIS ELE PASSOU
 
 SELECT
 	TC.CPF,
@@ -77,6 +77,7 @@ SELECT
 	TC.VOLUME_DE_COMPRA, 
 	[TOTAL VENDA].[MÊS/ANO],
 	[TOTAL VENDA].[QUANTIDADE TOTAL],
+	ROUND((1 - (VOLUME_DE_COMPRA/[QUANTIDADE TOTAL])) * 100, 2) AS PERCENTUAL,
 	(CASE 
 		WHEN 	TC.VOLUME_DE_COMPRA >= [TOTAL VENDA].[QUANTIDADE TOTAL]
 			THEN 'VENDAS VALIDAS'
