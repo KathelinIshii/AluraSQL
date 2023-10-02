@@ -17,4 +17,4 @@ INSERT INTO [dbo].[PRODUTOS]
            ,3.25)
 GO
 
-
+SELECT * FROM VENDEDORES;
